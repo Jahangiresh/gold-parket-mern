@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border p-0 m-0 overflow-x-hidden;
+  font-family: "Roboto", sans-serif;
+}
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.bg-black {
+  @apply bg-[#121212];
+}
+.marquee {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.btn_yellow_main {
+  @apply bg-[#E7B764] text-[#121212] text-[16px] px-[23px] py-[10px] rounded-[50px] hover:bg-[#ddaf5e] transition-all duration-200 font-[600];
+}
+.btn_yellow_secondary {
+  @apply text-[16px] px-[23px] py-[10px] rounded-[50px]  transition-all duration-200 font-[600] border-2 border-[#E7B764] text-[#E7B764] hover:text-[#121212] hover:bg-[#E7B764];
+}
+.btn_black {
+  @apply text-[16px] px-[23px] py-[10px] rounded-[50px] bg-[#121212] text-white transition-all duration-200 font-[600] border-2   hover:bg-[#414141];
+}
+.btn_black_secondary {
+  @apply text-[16px] px-[23px] py-[10px] rounded-[50px]  transition-all duration-200 font-[600] border-2 border-[#121212] text-[#121212] hover:text-white hover:bg-[#121212];
+}
+.text-yellow {
+  @apply text-[#E7B764];
+}
+.my_container {
+  @apply max-lg:px-14 max-xl:px-20 xl:w-[1200px]  max-md:px-5 max-sm:px-4  m-auto;
+}
+.li_after::after {
+  @apply content-[""] bg-[#121212] absolute  z-10 bottom-0 h-0.5 left-0 transition-all duration-200 w-0 group-hover:w-full;
+}
+
+/* //carousel  */

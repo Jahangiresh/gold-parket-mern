@@ -1,0 +1,10 @@
+<svg width="39" height="30" viewBox="0 0 39 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame 102">
+<mask id="path-1-inside-1_447_285" fill="white">
+<rect y="0.5" width="29" height="29" rx="1"/>
+</mask>
+<rect y="0.5" width="29" height="29" rx="1" fill="white"/>
+<path id="Vector 1" d="M4 14.8175L15.4526 26.5L38 3.5" stroke="#121212" stroke-width="2" stroke-linecap="round"/>
+<rect y="0.5" width="29" height="29" rx="1" stroke="#121212" stroke-width="3" mask="url(#path-1-inside-1_447_285)"/>
+</g>
+</svg>
